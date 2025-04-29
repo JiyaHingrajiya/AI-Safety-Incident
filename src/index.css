@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.bg-dark {
+  background-color: #121212 !important;
+}
+
+.text-light {
+  color: #e0e0e0 !important;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 1rem 2rem 2rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.bg-dark .container {
+  background: #1e1e1e;
+  box-shadow: 0 2px 12px rgba(255,255,255,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.controls label {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.filter, .sort {
+  display: flex;
+  align-items: center;
+}
+
+select {
+  padding: 0.3rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.incident-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.incident-item {
+  border-bottom: 1px solid #ddd;
+  padding: 0.75rem 0;
+}
+
+.incident-summary {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.severity {
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+  color: white;
+  user-select: none;
+}
+
+.severity-low {
+  background-color: #4caf50;
+}
+
+.severity-medium {
+  background-color: #ff9800;
+}
+
+.severity-high {
+  background-color: #f44336;
+}
+
+.reported-at {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.view-details-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.view-details-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.description {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #555;
+  grid-column: 1 / -1;
+}
+
+.report-form {
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+.report-form h2 {
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+input[type="text"],
+textarea,
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+textarea {
+  min-height: 80px;
+}
+
+.error {
+  border-color: #f44336;
+}
+
+.error-message {
+  color: #f44336;
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .incident-summary {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+  .view-details-btn {
+    justify-self: start;
+  }
+  .controls {
+    flex-direction: column;
+  }
+}
