@@ -1,6 +1,6 @@
 ﻿# AI-Saftey-Incident-Dashboard
 
-Overview
+#Overview
 An interactive web-based dashboard designed to monitor, filter, and report AI safety incidents. This project aims to provide a user-friendly interface for tracking AI-related safety events, facilitating better understanding and management of AI systems.
 
 Features
